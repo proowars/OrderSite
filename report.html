@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет о проделанных работах - Водоочистка и водоподготовка</title>
+    <link rel="stylesheet" href="styles/report.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>AquaTech</h1>
+                <span class="subtitle">Водоочистка и водоподготовка будущего</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="report.html" class="nav-link active">Отчет</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="report-hero">
+            <div class="container">
+                <h1 class="page-title">Отчет о проделанных работах</h1>
+            </div>
+        </section>
+
+        <section class="report-content">
+            <div class="container">
+                <div class="report-section">
+                    <h2>Наши выполненные работы</h2>
+                    <p class="section-description">Портфолио реализованных проектов по установке и монтажу сантехники</p>
+                    <div id="portfolio-grid" class="portfolio-grid">
+                        <!-- Портфолио будет загружено через JS -->
+                    </div>
+                </div>
+
+                <div class="report-section">
+                    <h2>Статистика</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-projects">0</div>
+                            <div class="stat-label">Выполненных проектов</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-products">0</div>
+                            <div class="stat-label">Товаров в каталоге</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="total-categories">0</div>
+                            <div class="stat-label">Категорий</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="satisfied-clients">100%</div>
+                            <div class="stat-label">Довольных клиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AquaTech. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/report.js"></script>
+</body>
+</html>

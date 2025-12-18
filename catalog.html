@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Водоочистка и водоподготовка</title>
+    <link rel="stylesheet" href="styles/catalog.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>AquaTech</h1>
+                <span class="subtitle">Водоочистка и водоподготовка будущего</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="catalog.html" class="nav-link active">Каталог</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="report.html" class="nav-link">Отчет</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-header">
+            <div class="container">
+                <h1 class="page-title">Каталог товаров</h1>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Поиск товаров...">
+                    <button id="search-btn" class="search-btn">🔍</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-content">
+            <div class="container">
+                <div id="products-grid" class="products-grid">
+                    <!-- Товары будут загружены через JS -->
+                </div>
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p>Товары не найдены</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AquaTech. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/catalog.js"></script>
+</body>
+</html>

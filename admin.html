@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель товаров</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>AquaTech</h1>
+                <span class="subtitle">Админ-панель каталога</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Сайт</a>
+                <button id="logout-btn" class="nav-link nav-link-button">Выйти</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container admin-layout">
+            <section class="panel panel-list">
+                <div class="panel-header">
+                    <h2>Товары</h2>
+                    <button id="refresh-btn" class="btn-secondary">Обновить</button>
+                </div>
+                <div id="products-list" class="products-list">
+                    <!-- Список товаров будет загружен через JS -->
+                </div>
+            </section>
+
+            <section class="panel panel-form">
+                <div class="panel-header">
+                    <h2 id="form-title">Создать товар</h2>
+                </div>
+                <form id="product-form" class="product-form">
+                    <input type="hidden" id="product-id">
+
+                    <div class="form-group">
+                        <label for="product-name">Название *</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-category">Категория *</label>
+                        <input type="text" id="product-category" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-price">Цена</label>
+                        <input type="text" id="product-price" placeholder="например: 25000 или 'уточнить у продавца'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-image">Иконка/эмодзи</label>
+                        <input type="text" id="product-image" placeholder="например: 💧">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-description">Описание</label>
+                        <textarea id="product-description" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-specs">Характеристики (по одной в строке, формат: Ключ: Значение)</label>
+                        <textarea id="product-specs" rows="6" placeholder="Тип системы: Обезжелезивание воды&#10;Производительность: до 2 м³/час"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary" id="save-btn">Сохранить</button>
+                        <button type="button" class="btn-secondary" id="reset-btn">Очистить форму</button>
+                        <button type="button" class="btn-danger" id="delete-btn" style="display:none;">Удалить</button>
+                    </div>
+
+                    <p class="hint">Поля с * обязательны для заполнения. Все изменения сразу попадают в каталог и карточки товаров.</p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts/admin.js"></script>
+</body>
+</html>
+
+
